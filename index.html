@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="myscripts.js"></script>
+    <script "stylesheet" src="style.scss"></script>
+    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+    <script src="less.js" type="text/javascript"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+        <ul>
+            <li>Look at this example in desktop sized window (wide enough, so that grid has 4 rows).</li>
+            <li>*My desired layout is for the top of green block to be directly attached to the bottom of the red ones and have standard distance (16px) betwen blue and red, and green and blue.</li>
+          </ul>
+          
+          <section>
+            <header>
+              <h3>Cells in this grid has no modifier classes, so never has desired* layout</h3>
+            </header>
+            <div class="mdc-layout-grid">
+              <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                <div class="content"></div>
+              </div>
+              <div class="mdc-layout-grid__cell">
+                <div class="content content--red"></div>
+              </div>
+              <div class="mdc-layout-grid__cell">
+                <div class="content content--red"></div>
+              </div>
+              <div class="mdc-layout-grid__cell">
+                <div class="content content--red"></div>
+              </div>
+              <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                <div class="content content--green"></div>
+              </div>
+              <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                <div class="content"></div>
+              </div>
+            </div>
+          </section>
+              
+          <section>
+            <header>
+              <h3>Cells in this grid has custom modifier classes on red and green cells, to achieve desired* layout</h3>
+              <span>(Orange cell has class to collapse both top and bottom margins.)</span>
+            </header>
+            <div class="mdc-layout-grid">
+              <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                <div class="content"></div>
+              </div>
+              <div class="mdc-layout-grid__cell custom-mdc-layout-grid__cell--collapse-bottom">
+                <div class="content content--red"></div>
+              </div>
+              <div class="mdc-layout-grid__cell custom-mdc-layout-grid__cell--collapse-bottom">
+                <div class="content content--red"></div>
+              </div>
+              <div class="mdc-layout-grid__cell custom-mdc-layout-grid__cell--collapse-bottom">
+                <div class="content content--red"></div>
+              </div>
+              <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12
+                custom-mdc-layout-grid__cell--collapse-top">
+                <div class="content content--green"></div>
+              </div>
+              <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                <div class="content"></div>
+              </div>
+              <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12
+                custom-mdc-layout-grid__cell--collapse-vertical">
+                <div class="content content--orange"></div>
+              </div>
+              <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                <div class="content"></div>
+              </div>
+            </div>
+          </section>
+    </div>
+  </body>
+</html>
